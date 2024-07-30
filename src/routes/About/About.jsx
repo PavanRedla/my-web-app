@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { name, location, Bus, add } from "my-own-react-library";
+import { photosAction } from "@/redux/actions/photosAction";
 
 export const About = () => {
   const busObj = new Bus();
@@ -14,6 +16,7 @@ export const About = () => {
       <h3>
         {busObj.fw} - {busObj.bw} - {busObj.totalWheels()} - {busObj.getColor()}{" "}
       </h3>
+      <button onClick={photosAction}>Get Photos</button>
     </div>
   );
 };

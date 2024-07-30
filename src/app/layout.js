@@ -44,6 +44,11 @@ export default function RootLayout({ children }) {
       path: "photos",
       text: "Photos",
     },
+    {
+      id: "posts",
+      path: "posts",
+      text: "Posts",
+    },
   ];
   return (
     <html lang="en">

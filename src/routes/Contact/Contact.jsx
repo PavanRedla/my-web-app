@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Table, { Accordian, NitList } from "my-own-react-library";
+import { photosAction } from "@/redux/actions/photosAction";
 
 export const Contact = () => {
   const data = [
@@ -33,6 +34,7 @@ export const Contact = () => {
       <Accordian data={data} />
 
       <NitList data={["s1", "s2", "s3"]} />
+      <button onClick={photosAction}>Get Photos</button>
     </div>
   );
 };
