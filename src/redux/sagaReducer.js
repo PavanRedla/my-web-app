@@ -1,9 +1,12 @@
 import { sagaInit } from "./init";
 
 export const sagaReducer = (state = sagaInit, action) => {
-  return {
-    ...state,
-    posts: action.payload,
-  };
+  switch (action.type) {
+    case "UPDATE_POSTS":
+      return {
+        ...state,
+        posts: action.payload,
+      };
+  }
   return state;
 };
